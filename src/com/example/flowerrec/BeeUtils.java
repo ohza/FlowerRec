@@ -25,7 +25,7 @@ public class BeeUtils {
 	public static int retNumIm = 17;
 	public static Model []values;
 
-	public static BeesmartImageContainer i1;
+	public static FlowerRecImageContainer i1;
 
 	private Activity activity;
 	
@@ -40,7 +40,7 @@ public class BeeUtils {
 	BeeUtils(Activity activity){
 		this.activity = activity;
 		if(i1 == null){
-		i1 = new BeesmartImageContainer();
+		i1 = new FlowerRecImageContainer();
 		}
 		initPlantTable();
 	}
