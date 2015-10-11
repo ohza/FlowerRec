@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/hautp_menu"
+        android:title="Hauptmenü"/>
+    
+    <item
+        android:id="@+id/foto_menu"
+        android:title="Fotomenü"/>
+    
+    <item
+        android:id="@+id/alle_s"
+        android:title="Alle Schätze"/>
+    
+    <item
+        android:id="@+id/meine_s"
+        android:title="Meine Schätze"/>
+    
+    <item
+        android:id="@+id/letzter_e"
+        android:title="Letzter Eintrag"/>
+    
+     <item
+        android:id="@+id/beenden"
+        android:title="Beenden"/>
+    
+  
+    
+    
+    
+
+</menu>
+
+
+    

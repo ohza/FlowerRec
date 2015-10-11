@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:id="@+id/radar_popupmenu">
+      <item android:id="@+id/radar_menu1"
+          android:title="Meine Schatze"/>
+      <item android:id="@+id/radar_menu2"
+          android:title="Alle Schatze"/>
+  </group>
+</menu>
+
+
+    

@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/TextField01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+    
+    
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_below="@id/TextField01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bee_smile" />
+    
+    
+    
+     
+
+     <LinearLayout
+         android:id="@+id/LinearLayout01"
+         android:layout_alignParentBottom = "true"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal" >
+
+         <Button
+             android:id="@+id/btnOne"
+             android:background="#0F000000"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:width="0dp" 
+             android:text="Übersicht"
+              />
+
+         <Button
+             android:id="@+id/btnTwo"
+             android:background="#0F000000"
+             android:layout_width="wrap_content"
+       		 android:layout_height="wrap_content"
+       		 android:layout_weight="1"
+       		 android:width="0dp"
+             android:text="Radar"
+             
+             
+              />
+
+         <Button
+             android:id="@+id/btnThree"
+             android:background="#0F000000"
+             android:layout_width="wrap_content"
+        	 android:layout_height="wrap_content"
+        	 android:layout_weight="1"
+        	 android:width="0dp"
+             android:text="Foto"
+             
+              />
+     </LinearLayout>
+     
+     <Button
+            android:id="@+id/myHappyButton"
+            android:layout_below="@id/imageView1"
+            android:layout_above="@id/LinearLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:textSize="30dp"
+            android:text="!! BeeHappy !!" />
+     
+     
+     
+</RelativeLayout>
