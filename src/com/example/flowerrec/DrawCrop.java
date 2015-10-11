@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 
 
 
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +22,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 public class DrawCrop extends Activity {
 
 	DrawingView dv ;
@@ -28,28 +30,18 @@ public class DrawCrop extends Activity {
 	private Paint       mPaint;
 	private Bitmap  mutableBitmap;
 	String TAG = "TEST";
-
-
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		dv = new DrawingView(this);
 		RelativeLayout relativeLayout = new RelativeLayout(this);
 
-
-
 		RelativeLayout.LayoutParams relativeParams2 = new RelativeLayout.LayoutParams(android.view.ViewGroup.LayoutParams.WRAP_CONTENT, android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
 		relativeParams2.addRule(RelativeLayout.BELOW,100);
 
-
 		relativeLayout.addView(dv,relativeParams2);
 		setContentView(relativeLayout);
-
-
-
-
-
 
 		mPaint = new Paint();
 		mPaint.setAntiAlias(true);
@@ -59,16 +51,13 @@ public class DrawCrop extends Activity {
 		mPaint.setStrokeJoin(Paint.Join.ROUND);
 		mPaint.setStrokeCap(Paint.Cap.ROUND);
 		mPaint.setStrokeWidth(7);
-
-
+		Toast.makeText(this, R.string.draw_inst, Toast.LENGTH_LONG).show();
 
 	}
 
 	public void executeStuff(){
 
 		try { 
-
-
 			FileOutputStream out = new FileOutputStream(Environment.getExternalStorageDirectory().getPath()+ "/Pictures/" + MainActivity.imageTime+"_test_seg.jpg");
 			//mutableBitmap = Bitmap.createScaledBitmap( mutableBitmap,480,640,true);
 			mutableBitmap.compress(Bitmap.CompressFormat.PNG, 100, out);

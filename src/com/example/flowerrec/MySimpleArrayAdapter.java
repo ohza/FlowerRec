@@ -50,7 +50,7 @@ public class MySimpleArrayAdapter extends ArrayAdapter<Model> {
 		if(DispIm.listItems.get(position).getBool()==1){
 			cB.setChecked(true);
 			rowView.setBackgroundColor(0xFFAEC6CF);
-			DispIm.statusV.setText("Bitte Auswal bestätigen..");
+			DispIm.statusV.setText(R.string.confirm_selection);
 
 		}
 		return rowView;

@@ -49,7 +49,6 @@ public class DispIm extends ListActivity {
 		adapter = new MySimpleArrayAdapter(this, listItems);
 		this.setListAdapter(adapter);
 		System.out.println("The method onCreate has been called");
-
 	}  
 
 	@Override
@@ -76,7 +75,7 @@ public class DispIm extends ListActivity {
 
 			if(listItems.get(i).getName().equals(((CheckBox) view).getTag()) && ((CheckBox) view).isChecked()){
 				listItems.get(i).setBool(1);
-				statusV.setText("Bitte auswahl bestätigen..");
+				statusV.setText(getString(R.string.confirm));
 				textF = true;
 			}
 
@@ -86,7 +85,7 @@ public class DispIm extends ListActivity {
 		}
 		
 		if(!textF){
-			statusV.setText("Welche der Planzen kommt deiner am nächsten?");
+			statusV.setText(getString(R.string.confirm_ask));
 		}
 
 		adapter.notifyDataSetChanged();

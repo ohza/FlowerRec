@@ -107,9 +107,7 @@ public class MainActivity extends Activity {
 
 		b2.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View v) {}
-				
-				
+			public void onClick(View v) {}		
 		});
 
 		b3.setOnClickListener(new OnClickListener() {
@@ -205,7 +203,7 @@ public class MainActivity extends Activity {
 				} else {
 					FlowerUtils.values[n] = new Model();
 					FlowerUtils.values[n].setProb(0.5f);
-					FlowerUtils.values[n].setName("Unbekannt");
+					FlowerUtils.values[n].setName(getString(R.string.unknown));
 					FlowerUtils.values[n].setBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.beeq));
 				}
 			}
@@ -260,11 +258,11 @@ public class MainActivity extends Activity {
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
 
-				if(item.toString().equals("Neues Foto")){
+				if(item.toString().equals(getString(R.string.new_photo))){
 						 raisePhotoIntent();
 				}
 
-				if(item.toString().equals("Zur Liste")){
+				if(item.toString().equals(getString(R.string.to_list))){
 					
 				}
 
@@ -385,25 +383,16 @@ public class MainActivity extends Activity {
 
 	}
 
-	public void dialogExample() {
-		Dialog dialog = new Dialog(MainActivity.this);
-		dialog.setTitle("Oswald Dialog");
-		dialog.setContentView(R.layout.text_box_dialog);
-		TextView tt = (TextView) dialog.findViewById(R.id.text_view_dialog);
-		tt.setText("This is my content");
-		dialog.show();
-	}
-
 	@Override
 	protected Dialog onCreateDialog(int id) {
 		switch (id) {
 		case DIALOG_ALERT:
 			// create out AlterDialog
 			Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage("FlowerRec wirklich beenden?");
+			builder.setMessage(R.string.quit_ask);
 			builder.setCancelable(true);
-			builder.setPositiveButton("Ja", new OkOnClickListener());
-			builder.setNegativeButton("Nein", new CancelOnClickListener());
+			builder.setPositiveButton(R.string.yes, new OkOnClickListener());
+			builder.setNegativeButton(R.string.no, new CancelOnClickListener());
 			AlertDialog dialog = builder.create();
 			dialog.show();
 		}
@@ -440,48 +429,5 @@ public class MainActivity extends Activity {
 		super.onResume();
 		Log.d(TAG, "ON RESUME ON MAIN ACTIVITY HAS BEEN CALLED");
 	}
-	
-	public void netAlShow(){
-		new AlertDialog.Builder(this)
-	    .setTitle("Server nicht erreichbar!")
-	    .setMessage("Die Fotos werden gespeichert und können zu einem späteren Zeitpunkt übermittelt werden.")
-	    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-	        @Override
-			public void onClick(DialogInterface dialog, int which) { 
-	        	raisePhotoIntent();
-	        }
-	     })
-	    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-	        @Override
-			public void onClick(DialogInterface dialog, int which) { 
-	            // do nothing
-	        }
-	     })
-	    .show();
-	}
-	
-	public void myAlertFun(){
 		
-		 new AlertDialog.Builder(MainActivity.this)
-        .setTitle("Netzwerk ausgeschalten")
-        .setMessage("Soll das Netzwerk aktiviert werden?")
-        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-               
-                MainActivity.this.startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
-            }
-        })
-        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-               
-            }
-        }).show();	  
-	}
-	
-	public void addToUnlabelledDataBase(String inputText,String inputText2){
-		
-	}
-	
 }

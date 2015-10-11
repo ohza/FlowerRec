@@ -10,7 +10,31 @@
         <item>1</item>
         <item>10</item>
         <item>50</item>>
-    </string-array> 
+    </string-array>
+    
+    <string name="exit">EXIT</string>
+    <string name="unknown">Unknown</string>
+    
+    <string name="confirm">Daffodil ..</string>
+    <string name="confirm_ask">Snowdrop ..</string>
+    
+    <string name="quit_ask">Do you really want to quit FlowerRec?</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    
+    <string name="new_photo">New photo</string>
+    <string name="to_list">To list</string>
+    
+    <string name="overview">Overview</string>
+    <string name="radar">Radar</string>
+    <string name="photo">Photo</string>
+    <string name="bee_ask">..lets find some flowers!</string>
+    <string name="draw_conf">Confirm</string>
+    
+    <string name="draw_inst">Outline the flower and press confirm..</string>
+    <string name="closest_ask">Which flower is closest to yours?</string>
+    <string name="your_flower_ask">Your flower</string>
+    <string name="confirm_selection">Please confirm selection..</string>
    
     <string name="daffodil_des">Daffodil ..</string>
     <string name="snowdrop_des">Snowdrop ..</string>
