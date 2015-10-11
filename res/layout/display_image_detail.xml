@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom = "true"
             android:textSize = "23sp"
-            android:text="Deine Planze?">
+            android:text="@string/your_flower_ask">
            </TextView>
  
     <ImageButton

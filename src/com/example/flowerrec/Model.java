@@ -4,7 +4,6 @@ import android.graphics.Bitmap;
 
 public class Model{
 
-
 	private String name;
 	private float prob;
 	private int isChecked;
@@ -12,7 +11,6 @@ public class Model{
 	
 	private String date;
 	private String gps;
-
 
 	public void setBitmap(Bitmap mybitmap){
 		this.bitmap = mybitmap;
@@ -46,9 +44,6 @@ public class Model{
 		return this.isChecked;
 	}
 	
-	
-	
-	
 	public String getDate(){
 		return this.date;
 	}
@@ -57,7 +52,6 @@ public class Model{
 		return this.gps;
 	}
 	
-	
 	public void setDate(String mydate){
 		this.date = mydate;
 	}
@@ -65,11 +59,4 @@ public class Model{
 	public void setGPS(String mygps){
 		this.gps = mygps;
 	}
-	
-
-
-
-
-
-
 }

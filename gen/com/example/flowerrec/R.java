@@ -14,7 +14,6 @@ public final class R {
     }
     public static final class array {
         public static final int count_type=0x7f0c0000;
-        public static final int place_type=0x7f0c0001;
     }
     public static final class attr {
         /** 
@@ -533,49 +532,49 @@ containing a value of this type.
         public static final int TextFieldAF=0x7f080033;
         public static final int TextFieldPlantA=0x7f080029;
         public static final int TextFieldPlantB=0x7f08002c;
-        public static final int action_settings=0x7f080047;
+        public static final int action_settings=0x7f080046;
         public static final int adjust_height=0x7f080001;
         public static final int adjust_width=0x7f080002;
-        public static final int alle_s=0x7f080043;
-        public static final int beenden=0x7f080046;
+        public static final int alle_s=0x7f080042;
+        public static final int beenden=0x7f080045;
         public static final int book_now=0x7f080012;
         public static final int btnOne=0x7f08001d;
         public static final int btnThree=0x7f08001f;
         public static final int btnTwo=0x7f08001e;
-        public static final int btn_a=0x7f08003f;
-        public static final int btn_b=0x7f080040;
+        public static final int btn_a=0x7f08003e;
+        public static final int btn_b=0x7f08003f;
         public static final int buyButton=0x7f08000e;
         public static final int buy_now=0x7f080013;
         public static final int buy_with_google=0x7f080014;
         public static final int cast_notification_id=0x7f080000;
-        public static final int checkbox=0x7f080039;
+        public static final int checkbox=0x7f080038;
         public static final int classic=0x7f080016;
         public static final int donate_with_google=0x7f080015;
-        public static final int foto_menu=0x7f080042;
-        public static final int foto_menu1=0x7f080049;
-        public static final int foto_menu2=0x7f08004a;
-        public static final int foto_popupmenu=0x7f080048;
+        public static final int foto_menu=0x7f080041;
+        public static final int foto_menu1=0x7f080048;
+        public static final int foto_menu2=0x7f080049;
+        public static final int foto_popupmenu=0x7f080047;
         public static final int grayscale=0x7f080017;
-        public static final int hautp_menu=0x7f080041;
+        public static final int hautp_menu=0x7f080040;
         public static final int holo_dark=0x7f080008;
         public static final int holo_light=0x7f080009;
         public static final int hybrid=0x7f080004;
-        public static final int icon=0x7f080036;
-        public static final int icon_u=0x7f08003a;
+        public static final int icon=0x7f080035;
+        public static final int icon_u=0x7f080039;
         public static final int imagDisp=0x7f080023;
         public static final int imageView1=0x7f08001b;
         public static final int imageViewPlant=0x7f08002a;
-        public static final int label=0x7f080037;
-        public static final int label_u=0x7f08003b;
-        public static final int labelsmall=0x7f080038;
-        public static final int labelsmall_u=0x7f08003c;
-        public static final int labelsmall_u_2=0x7f08003d;
-        public static final int letzter_e=0x7f080045;
+        public static final int label=0x7f080036;
+        public static final int label_u=0x7f08003a;
+        public static final int labelsmall=0x7f080037;
+        public static final int labelsmall_u=0x7f08003b;
+        public static final int labelsmall_u_2=0x7f08003c;
+        public static final int letzter_e=0x7f080044;
         public static final int linlay=0x7f080022;
         public static final int madeDisp=0x7f080024;
-        public static final int map=0x7f080035;
+        public static final int map=0x7f080034;
         public static final int match_parent=0x7f080010;
-        public static final int meine_s=0x7f080044;
+        public static final int meine_s=0x7f080043;
         public static final int monochrome=0x7f080018;
         public static final int myHappyButton=0x7f080020;
         public static final int noButton1=0x7f080027;
@@ -583,26 +582,25 @@ containing a value of this type.
         public static final int normal=0x7f080005;
         public static final int plantInfo=0x7f080025;
         public static final int plant_sel=0x7f080021;
-        public static final int popup_1=0x7f08004c;
+        public static final int popup_1=0x7f08004b;
         public static final int production=0x7f08000a;
-        public static final int radar_menu1=0x7f08004e;
-        public static final int radar_menu2=0x7f08004f;
-        public static final int radar_popupmenu=0x7f08004d;
+        public static final int radar_menu1=0x7f08004d;
+        public static final int radar_menu2=0x7f08004e;
+        public static final int radar_popupmenu=0x7f08004c;
         public static final int radioArea=0x7f08002f;
         public static final int radioNum=0x7f08002e;
         public static final int radioPlant=0x7f08002d;
         public static final int sandbox=0x7f08000b;
         public static final int satellite=0x7f080006;
-        public static final int search=0x7f08004b;
+        public static final int search=0x7f08004a;
         public static final int selectionDetails=0x7f08000f;
         public static final int slide=0x7f080019;
         public static final int spinner1=0x7f080032;
-        public static final int spinner2=0x7f080034;
         public static final int stk=0x7f080031;
         public static final int strict_sandbox=0x7f08000c;
         public static final int terrain=0x7f080007;
         public static final int test=0x7f08000d;
-        public static final int text_view_dialog=0x7f08003e;
+        public static final int text_view_dialog=0x7f08003d;
         public static final int wrap_content=0x7f080011;
         public static final int yesButton1=0x7f080026;
     }
@@ -631,10 +629,8 @@ containing a value of this type.
         public static final int gtm_analytics=0x7f050000;
     }
     public static final class string {
-        public static final int SERVER_IP=0x7f07002f;
         public static final int accept=0x7f070002;
         public static final int action_settings=0x7f07002d;
-        public static final int akelei_des=0x7f070031;
         public static final int app_name=0x7f07002c;
         /**  Brand name for Facebook [DO NOT TRANSLATE] 
          */
@@ -642,11 +638,9 @@ containing a value of this type.
         /**  Brand name for Google [DO NOT TRANSLATE] 
          */
         public static final int auth_google_play_services_client_google_display_name=0x7f070006;
-        public static final int bohnenkraut_des=0x7f07003d;
-        public static final int borretsch_des=0x7f07003e;
-        public static final int brombeere_des=0x7f070032;
-        public static final int buchweizen_des=0x7f07003f;
-        public static final int bueschelschoen_des=0x7f070033;
+        public static final int bee_ask=0x7f07003b;
+        public static final int bluebell_des=0x7f070044;
+        public static final int buttercup_des=0x7f07004e;
         /**  Message of the notification to indicate an active cast display connection.  [CHAR LIMIT=80] NOTE: Same text as msgid="794424023757290105" 
          */
         public static final int cast_notification_connected_message=0x7f070009;
@@ -656,6 +650,8 @@ containing a value of this type.
         /**  Label of a button to disconnect an active cast display connection.  [CHAR LIMIT=25] NOTE: Same text as msgid="9024230238785261495" 
          */
         public static final int cast_notification_disconnect=0x7f07000a;
+        public static final int closest_ask=0x7f07003e;
+        public static final int collsfoot_des=0x7f070051;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
         public static final int common_android_wear_notification_needs_update_text=0x7f07000d;
@@ -768,46 +764,46 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f070026;
+        public static final int confirm=0x7f070031;
+        public static final int confirm_ask=0x7f070032;
+        public static final int confirm_selection=0x7f070040;
+        public static final int cowslip_des=0x7f07004d;
         public static final int create_calendar_message=0x7f070005;
         public static final int create_calendar_title=0x7f070004;
-        public static final int curry_des=0x7f070040;
+        public static final int crocus_des=0x7f070045;
+        public static final int daffodil_des=0x7f070041;
+        public static final int daisy_des=0x7f07004b;
+        public static final int dandelion_des=0x7f07004c;
         public static final int decline=0x7f070003;
-        public static final int dill_des=0x7f070041;
-        public static final int duftveilchen_des=0x7f070034;
-        public static final int estragon_des=0x7f070042;
-        public static final int hello_world=0x7f07002e;
-        public static final int himbeere_des=0x7f070043;
-        public static final int huflattich_des=0x7f070035;
-        public static final int inkarnatklee_des=0x7f070036;
-        public static final int johanniskraut_des=0x7f070037;
-        public static final int kaiserkrone_des=0x7f070044;
-        public static final int kakuzienerkresse_des=0x7f070039;
-        public static final int kamille_des=0x7f070038;
-        public static final int knoeterich_des=0x7f070045;
-        public static final int koriander_des=0x7f070046;
-        public static final int lavendel_des=0x7f07003a;
-        public static final int oregano_des=0x7f070047;
-        public static final int pestwurz_des=0x7f070048;
-        public static final int petersilie_des=0x7f070049;
-        public static final int pfefferminze_des=0x7f07004a;
-        public static final int rosmarien_des=0x7f07004b;
-        public static final int salbei_des=0x7f07004c;
-        public static final int schneegloeckchen_des=0x7f07003b;
-        public static final int schnittlauch_des=0x7f07004d;
-        public static final int schw_johanisbeere_des=0x7f07004e;
-        public static final int search_title=0x7f070030;
+        public static final int draw_conf=0x7f07003c;
+        public static final int draw_inst=0x7f07003d;
+        public static final int exit=0x7f07002f;
+        public static final int fritillary_des=0x7f070049;
+        public static final int iris_des=0x7f070046;
+        public static final int lily_des=0x7f070043;
+        public static final int new_photo=0x7f070036;
+        public static final int no=0x7f070035;
+        public static final int overview=0x7f070038;
+        public static final int pansy_des=0x7f070050;
+        public static final int photo=0x7f07003a;
+        public static final int quit_ask=0x7f070033;
+        public static final int radar=0x7f070039;
+        public static final int search_title=0x7f07002e;
+        public static final int snowdrop_des=0x7f070042;
         public static final int store_picture_message=0x7f070001;
         public static final int store_picture_title=0x7f070000;
-        public static final int taubnessel_des=0x7f07004f;
-        public static final int thymian_des=0x7f070050;
-        public static final int trollblume_des=0x7f07003c;
+        public static final int sunflower_des=0x7f07004a;
+        public static final int tiger_des=0x7f070047;
+        public static final int to_list=0x7f070037;
+        public static final int tulip_des=0x7f070048;
+        public static final int unknown=0x7f070030;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
         public static final int wallet_buy_button_place_holder=0x7f07002b;
-        public static final int weissersenf_des=0x7f070051;
-        public static final int ysop_des=0x7f070052;
-        public static final int zitronenmelisse_des=0x7f070053;
+        public static final int windflower_des=0x7f07004f;
+        public static final int yes=0x7f070034;
+        public static final int your_flower_ask=0x7f07003f;
     }
     public static final class style {
         /** 

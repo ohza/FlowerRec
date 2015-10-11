@@ -4,7 +4,7 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="collapseActionView|ifRoom"
-        android:title="Bestätigen"/>
+        android:title="@string/draw_conf"/>
     
 </menu>
 

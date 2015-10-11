@@ -6,28 +6,24 @@
     <TextView
         android:id="@+id/TextField01"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-         />
-    
-    
+        android:layout_height="wrap_content">
+    </TextView>
     
     <ImageView
         android:id="@+id/imageView1"
         android:layout_below="@id/TextField01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/bee_smile" />
+        android:src="@drawable/bee_smile">
+     </ImageView>
     
     
-    
-     
-
      <LinearLayout
          android:id="@+id/LinearLayout01"
          android:layout_alignParentBottom = "true"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
-         android:orientation="horizontal" >
+         android:orientation="horizontal">
 
          <Button
              android:id="@+id/btnOne"
@@ -36,8 +32,8 @@
              android:layout_height="wrap_content"
              android:layout_weight="1"
              android:width="0dp" 
-             android:text="Übersicht"
-              />
+             android:text="@string/overview">
+         </Button>
 
          <Button
              android:id="@+id/btnTwo"
@@ -46,10 +42,8 @@
        		 android:layout_height="wrap_content"
        		 android:layout_weight="1"
        		 android:width="0dp"
-             android:text="Radar"
-             
-             
-              />
+             android:text="@string/radar">
+         </Button>
 
          <Button
              android:id="@+id/btnThree"
@@ -58,9 +52,8 @@
         	 android:layout_height="wrap_content"
         	 android:layout_weight="1"
         	 android:width="0dp"
-             android:text="Foto"
-             
-              />
+             android:text="@string/photo">
+         </Button>
      </LinearLayout>
      
      <Button
@@ -70,9 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
-            android:textSize="30dp"
-            android:text="!! BeeHappy !!" />
-     
-     
-     
+            android:textSize="24dp"
+            android:text="@string/bee_ask" />
+   
 </RelativeLayout>

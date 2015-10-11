@@ -45,8 +45,8 @@ public class DetailActivity extends Activity {
 		yBut = (ImageButton) findViewById(R.id.yesButton1);
 		nBut = (ImageButton) findViewById(R.id.noButton1);
 
-		plantInfo.setText(Html.fromHtml("<b>" + BeeUtils.values[getIntent().getIntExtra("pos",0)].getName() + "</b>" +  "<br />" + 
-				"<small>" +BeeUtils.pDes.get(BeeUtils.values[getIntent().getIntExtra("pos",0)].getName()) + "</small>"));
+		plantInfo.setText(Html.fromHtml("<b>" + FlowerUtils.values[getIntent().getIntExtra("pos",0)].getName() + "</b>" +  "<br />" + 
+				"<small>" +FlowerUtils.pDes.get(FlowerUtils.values[getIntent().getIntExtra("pos",0)].getName()) + "</small>"));
 
 		plantInfo.setMovementMethod(new ScrollingMovementMethod());
 
@@ -86,7 +86,7 @@ public class DetailActivity extends Activity {
 
 	public void drawStuff(int height,int width) {
 
-		byte[] data = Base64.decode(BeeUtils.i1.getImBin(0), Base64.DEFAULT);
+		byte[] data = Base64.decode(FlowerUtils.i1.getImBin(0), Base64.DEFAULT);
 		Bitmap madeImg = BitmapFactory.decodeByteArray(data,0,data.length);
 
 		double scale_2 = (double)(height/2) / (double)madeImg.getHeight() ;
@@ -96,7 +96,7 @@ public class DetailActivity extends Activity {
 		Log.d(TAG,"scale_2: "+scale_2);
 		Log.d(TAG,"width_2: "+width_2);
 
-		Bitmap selB = addWhiteBorder(Bitmap.createScaledBitmap(BeeUtils.values[getIntent().getIntExtra("pos",0)].getBitmap(),width/2-4,width/2-4,true),2);
+		Bitmap selB = addWhiteBorder(Bitmap.createScaledBitmap(FlowerUtils.values[getIntent().getIntExtra("pos",0)].getBitmap(),width/2-4,width/2-4,true),2);
 		Bitmap madB = addWhiteBorder(Bitmap.createScaledBitmap(madeImg,width/2-4,width/2-4,true),2);
 
 

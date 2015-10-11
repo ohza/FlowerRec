@@ -1,9 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
   <group android:id="@+id/foto_popupmenu">
       <item android:id="@+id/foto_menu1"
-          android:title="Neues Foto"/>
+          android:title="@string/new_photo"/>
       <item android:id="@+id/foto_menu2"
-          android:title="Zur Liste"/>
+          android:title="@string/to_list"/>
   </group>
 </menu>
 
