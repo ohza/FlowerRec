@@ -45,8 +45,8 @@ public class DispIm extends ListActivity {
 		lstView.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
 
 
-		for(int i=0;i<BeeUtils.retNumIm+1;i++){	
-			listItems.add(BeeUtils.values[i]);
+		for(int i=0;i<FlowerUtils.retNumIm+1;i++){	
+			listItems.add(FlowerUtils.values[i]);
 		}
 		adapter = new MySimpleArrayAdapter(this, listItems);
 		this.setListAdapter(adapter);

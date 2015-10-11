@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
 	private static int TAKE_PICTURE = 1;
 	private static int RETURN_SEGMENTATION = 2;
 	private Uri outputFileUri;
-	BeeUtils bU;
+	FlowerUtils bU;
 	Context context;
 	Location lo;
 	File file;
@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
 		
 		act = this;
 		
-		bU = new BeeUtils(act);
+		bU = new FlowerUtils(act);
 		
 		setContentView(R.layout.activity_main);
 		tf = (TextView) findViewById(R.id.TextField01);
@@ -170,7 +170,6 @@ public class MainActivity extends Activity {
 		}	 
 	}
 	
-	
 	public void doSVM(){
 	
 		try {
@@ -187,27 +186,27 @@ public class MainActivity extends Activity {
 			    }
 			});
 			
-			float[][] myret_c = new float[BeeUtils.retNumIm][2];
+			float[][] myret_c = new float[FlowerUtils.retNumIm][2];
 		
-			for(int r = 0;r<BeeUtils.retNumIm;r++){
-				myret_c[r][0] = myret[BeeUtils.retNumIm-1-r][0];
-				myret_c[r][1] = myret[BeeUtils.retNumIm-1-r][1];	
+			for(int r = 0;r<FlowerUtils.retNumIm;r++){
+				myret_c[r][0] = myret[FlowerUtils.retNumIm-1-r][0];
+				myret_c[r][1] = myret[FlowerUtils.retNumIm-1-r][1];	
 			}
 			
 			myret = myret_c;
-			BeeUtils.values = new Model[BeeUtils.retNumIm+1];
+			FlowerUtils.values = new Model[FlowerUtils.retNumIm+1];
 
-			for (int n=0;n<(BeeUtils.retNumIm+1);n++) {
-				if (n<BeeUtils.retNumIm) {
-					BeeUtils.values[n] = new Model();
-					BeeUtils.values[n].setProb(myret[n][0]*100);
-					BeeUtils.values[n].setName(BeeUtils.plantNameID.get(""+((int)myret[n][1])));
-					BeeUtils.values[n].setBitmap(BitmapFactory.decodeResource(context.getResources(),context.getResources().getIdentifier("image_class_"+((int)myret[n][1]), "drawable",  context.getPackageName())));		
+			for (int n=0;n<(FlowerUtils.retNumIm+1);n++) {
+				if (n<FlowerUtils.retNumIm) {
+					FlowerUtils.values[n] = new Model();
+					FlowerUtils.values[n].setProb(myret[n][0]*100);
+					FlowerUtils.values[n].setName(FlowerUtils.plantNameID.get(""+((int)myret[n][1])));
+					FlowerUtils.values[n].setBitmap(BitmapFactory.decodeResource(context.getResources(),context.getResources().getIdentifier("image_class_"+((int)myret[n][1]), "drawable",  context.getPackageName())));		
 				} else {
-					BeeUtils.values[n] = new Model();
-					BeeUtils.values[n].setProb(0.5f);
-					BeeUtils.values[n].setName("Unbekannt");
-					BeeUtils.values[n].setBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.beeq));
+					FlowerUtils.values[n] = new Model();
+					FlowerUtils.values[n].setProb(0.5f);
+					FlowerUtils.values[n].setName("Unbekannt");
+					FlowerUtils.values[n].setBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.beeq));
 				}
 			}
 			
@@ -218,17 +217,17 @@ public class MainActivity extends Activity {
 			
 			M[0] = new ModelParcelable();
 			
-			M[0].setName(BeeUtils.values[0].getName());
-			M[0].setDate(BeeUtils.values[0].getDate());
-			M[0].setGPS(BeeUtils.values[0].getGPS());
-			M[0].setBitmap(BeeUtils.values[0].getBitmap());
+			M[0].setName(FlowerUtils.values[0].getName());
+			M[0].setDate(FlowerUtils.values[0].getDate());
+			M[0].setGPS(FlowerUtils.values[0].getGPS());
+			M[0].setBitmap(FlowerUtils.values[0].getBitmap());
 			
 	        M[1] = new ModelParcelable();
 			
-			M[1].setName(BeeUtils.values[1].getName());
-			M[1].setDate(BeeUtils.values[1].getDate());
-			M[1].setGPS(BeeUtils.values[1].getGPS());
-			M[1].setBitmap(BeeUtils.values[1].getBitmap());
+			M[1].setName(FlowerUtils.values[1].getName());
+			M[1].setDate(FlowerUtils.values[1].getDate());
+			M[1].setGPS(FlowerUtils.values[1].getGPS());
+			M[1].setBitmap(FlowerUtils.values[1].getBitmap());
 			
 			intent.putExtra("cont", (ModelParcelable[])M);
 			
@@ -306,15 +305,15 @@ public class MainActivity extends Activity {
 		if (requestCode == RETURN_SEGMENTATION) {
 			if (resultCode == RESULT_OK) {
 				
-				BeeUtils.i1.setImBin(""+imageTime+"_test.jpg",0);
-				BeeUtils.i1.setImBin(""+imageTime+"_test_seg.jpg",1);
+				FlowerUtils.i1.setImBin(""+imageTime+"_test.jpg",0);
+				FlowerUtils.i1.setImBin(""+imageTime+"_test_seg.jpg",1);
 				
 				Calendar c = Calendar.getInstance();
 				
 				SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 				String formattedDate = df.format(c.getTime());
 				
-				BeeUtils.i1.setDate(formattedDate);
+				FlowerUtils.i1.setDate(formattedDate);
 				
 				try {
 					new NonfreeJNILib().execute(Environment.getExternalStorageDirectory().getPath()+"/Pictures/" + imageTime+"_test.jpg").get();
@@ -401,7 +400,7 @@ public class MainActivity extends Activity {
 		case DIALOG_ALERT:
 			// create out AlterDialog
 			Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage("BeeSmart wirklich beenden?");
+			builder.setMessage("FlowerRec wirklich beenden?");
 			builder.setCancelable(true);
 			builder.setPositiveButton("Ja", new OkOnClickListener());
 			builder.setNegativeButton("Nein", new CancelOnClickListener());

@@ -8,15 +8,15 @@ import android.util.Base64;
 
 public class FlowerRecImageContainer {
 	
-	BeeUtils bU = new BeeUtils();
+	FlowerUtils bU = new FlowerUtils();
 	String TAG = "TEST";
 
 	private String Date;
 	private String Attr;
 
-	private String [] Image_base64 = new String[BeeUtils.retNumIm];
-	private String[] ClassName = new String[BeeUtils.retNumIm];
-	private float [] ClassProb = new float[BeeUtils.retNumIm];
+	private String [] Image_base64 = new String[FlowerUtils.retNumIm];
+	private String[] ClassName = new String[FlowerUtils.retNumIm];
+	private float [] ClassProb = new float[FlowerUtils.retNumIm];
 
 	FlowerRecImageContainer(FlowerRecImageContainer InitCont){
 
@@ -34,7 +34,7 @@ public class FlowerRecImageContainer {
 
 	FlowerRecImageContainer(String InitString){
 
-		for(int i = 0;i<BeeUtils.retNumIm;i++){
+		for(int i = 0;i<FlowerUtils.retNumIm;i++){
 
 			String imbin = "ImBin0"+ Integer.toString(i+1);
 			String classN = "ClassName0"+ Integer.toString(i+1);
