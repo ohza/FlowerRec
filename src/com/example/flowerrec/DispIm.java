@@ -23,8 +23,6 @@ public class DispIm extends ListActivity {
 	public static int mSelectedItem = -1;
 	public static TextView statusV;
 
-
-
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
@@ -52,18 +50,14 @@ public class DispIm extends ListActivity {
 		this.setListAdapter(adapter);
 		System.out.println("The method onCreate has been called");
 
-
 	}  
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 
 		if(listItems.get(position).getBool()==0){
-
 			startActivity(new Intent(this,DetailActivity.class).putExtra("pos",position));
-
 		}
-
 
 		if(listItems.get(position).getBool()==1){
 
@@ -80,7 +74,6 @@ public class DispIm extends ListActivity {
 			System.out.println(i);
 			System.out.println(listItems.size());
 
-
 			if(listItems.get(i).getName().equals(((CheckBox) view).getTag()) && ((CheckBox) view).isChecked()){
 				listItems.get(i).setBool(1);
 				statusV.setText("Bitte auswahl bestätigen..");
@@ -90,18 +83,12 @@ public class DispIm extends ListActivity {
 			if(listItems.get(i).getName().equals(((CheckBox) view).getTag()) && !((CheckBox) view).isChecked()){
 				listItems.get(i).setBool(0);
 			}
-
 		}
+		
 		if(!textF){
 			statusV.setText("Welche der Planzen kommt deiner am nächsten?");
-
 		}
 
 		adapter.notifyDataSetChanged();
-
 	}
-
-
-
-
 } 

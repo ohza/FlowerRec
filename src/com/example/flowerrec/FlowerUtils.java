@@ -87,35 +87,29 @@ public class FlowerUtils {
 		for(int i=0;i<retNumIm;i++){
 			plantNameID.put(""+i,Plants[i]);
 		}
-
+		
 		plantNameID.put("-1",Plants[retNumIm]);
-		pDes.put(Plants[0], activity.getString(R.string.akelei_des));
-		pDes.put(Plants[1], activity.getString(R.string.bohnenkraut_des));
+		pDes.put(Plants[0], activity.getString(R.string.daffodil_des));
+		pDes.put(Plants[1], activity.getString(R.string.snowdrop_des));
+		pDes.put(Plants[2], activity.getString(R.string.lily_des));
+		pDes.put(Plants[3], activity.getString(R.string.bluebell_des));
 		
-		pDes.put(Plants[2], activity.getString(R.string.borretsch_des));
+		pDes.put(Plants[4], activity.getString(R.string.crocus_des));
+		pDes.put(Plants[5], activity.getString(R.string.iris_des));
+		pDes.put(Plants[6], activity.getString(R.string.tiger_des));
+		pDes.put(Plants[7], activity.getString(R.string.tulip_des));
 		
-		pDes.put(Plants[3], activity.getString(R.string.brombeere_des));
+		pDes.put(Plants[8], activity.getString(R.string.fritillary_des));
+		pDes.put(Plants[9], activity.getString(R.string.sunflower_des));
+		pDes.put(Plants[10], activity.getString(R.string.daisy_des));
+		pDes.put(Plants[11], activity.getString(R.string.dandelion_des));
 		
-		pDes.put(Plants[4], activity.getString(R.string.buchweizen_des));
+		pDes.put(Plants[12], activity.getString(R.string.cowslip_des));
+		pDes.put(Plants[13], activity.getString(R.string.buttercup_des));
+		pDes.put(Plants[14], activity.getString(R.string.windflower_des));
+		pDes.put(Plants[15], activity.getString(R.string.pansy_des));
 		
-		pDes.put(Plants[5], activity.getString(R.string.bueschelschoen_des));
-		
-		pDes.put(Plants[6], activity.getString(R.string.curry_des));
-		pDes.put(Plants[7], activity.getString(R.string.dill_des));
-		
-		pDes.put(Plants[8], activity.getString(R.string.duftveilchen_des));
-		
-		pDes.put(Plants[9], activity.getString(R.string.estragon_des));
-		pDes.put(Plants[10], activity.getString(R.string.himbeere_des));
-		
-		pDes.put(Plants[11], activity.getString(R.string.huflattich_des));
-		pDes.put(Plants[12], activity.getString(R.string.inkarnatklee_des));
-		pDes.put(Plants[13], activity.getString(R.string.johanniskraut_des));
-		
-		pDes.put(Plants[14], activity.getString(R.string.kaiserkrone_des));
-		
-		pDes.put(Plants[15], activity.getString(R.string.kamille_des));
-		pDes.put(Plants[16], activity.getString(R.string.kakuzienerkresse_des));	
+		pDes.put(Plants[16], activity.getString(R.string.collsfoot_des));	
 
 	}
 }
