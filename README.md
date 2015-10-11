@@ -12,7 +12,8 @@ to train a support vector machine
 The files derived during training (support vectors and scaling file) are then put onto the device.
 
 When testing, it uses the nonfree Sift (OpenCV for Android) implementation to derive
-and cluster the features. After projecting into the SVM, each class is associated with a probability.
+and cluster the features. After projecting into the SVM, each class is associated with a probability,
+and displayed on the device.
 
 
 
