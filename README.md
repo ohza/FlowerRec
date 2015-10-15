@@ -1,5 +1,5 @@
 # FlowerRec
-Android App for Flower Recognition
+Android application for Flower recognition
 
 A native android app for recognising flowers.
 Training is done offline and uses the dataset of Nilsback and Zisserman.
