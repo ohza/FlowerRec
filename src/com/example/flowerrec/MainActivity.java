@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
 	private static int TAKE_PICTURE = 1;
 	private static int RETURN_SEGMENTATION = 2;
 	private Uri outputFileUri;
-	BeeUtils bU;
+	FlowerUtils bU;
 	Context context;
 	Location lo;
 	File file;
@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
 		
 		act = this;
 		
-		bU = new BeeUtils(act);
+		bU = new FlowerUtils(act);
 		
 		setContentView(R.layout.activity_main);
 		tf = (TextView) findViewById(R.id.TextField01);
@@ -107,9 +107,7 @@ public class MainActivity extends Activity {
 
 		b2.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View v) {}
-				
-				
+			public void onClick(View v) {}		
 		});
 
 		b3.setOnClickListener(new OnClickListener() {
@@ -170,7 +168,6 @@ public class MainActivity extends Activity {
 		}	 
 	}
 	
-	
 	public void doSVM(){
 	
 		try {
@@ -187,27 +184,27 @@ public class MainActivity extends Activity {
 			    }
 			});
 			
-			float[][] myret_c = new float[BeeUtils.retNumIm][2];
+			float[][] myret_c = new float[FlowerUtils.retNumIm][2];
 		
-			for(int r = 0;r<BeeUtils.retNumIm;r++){
-				myret_c[r][0] = myret[BeeUtils.retNumIm-1-r][0];
-				myret_c[r][1] = myret[BeeUtils.retNumIm-1-r][1];	
+			for(int r = 0;r<FlowerUtils.retNumIm;r++){
+				myret_c[r][0] = myret[FlowerUtils.retNumIm-1-r][0];
+				myret_c[r][1] = myret[FlowerUtils.retNumIm-1-r][1];	
 			}
 			
 			myret = myret_c;
-			BeeUtils.values = new Model[BeeUtils.retNumIm+1];
+			FlowerUtils.values = new Model[FlowerUtils.retNumIm+1];
 
-			for (int n=0;n<(BeeUtils.retNumIm+1);n++) {
-				if (n<BeeUtils.retNumIm) {
-					BeeUtils.values[n] = new Model();
-					BeeUtils.values[n].setProb(myret[n][0]*100);
-					BeeUtils.values[n].setName(BeeUtils.plantNameID.get(""+((int)myret[n][1])));
-					BeeUtils.values[n].setBitmap(BitmapFactory.decodeResource(context.getResources(),context.getResources().getIdentifier("image_class_"+((int)myret[n][1]), "drawable",  context.getPackageName())));		
+			for (int n=0;n<(FlowerUtils.retNumIm+1);n++) {
+				if (n<FlowerUtils.retNumIm) {
+					FlowerUtils.values[n] = new Model();
+					FlowerUtils.values[n].setProb(myret[n][0]*100);
+					FlowerUtils.values[n].setName(FlowerUtils.plantNameID.get(""+((int)myret[n][1])));
+					FlowerUtils.values[n].setBitmap(BitmapFactory.decodeResource(context.getResources(),context.getResources().getIdentifier("image_class_"+((int)myret[n][1]), "drawable",  context.getPackageName())));		
 				} else {
-					BeeUtils.values[n] = new Model();
-					BeeUtils.values[n].setProb(0.5f);
-					BeeUtils.values[n].setName("Unbekannt");
-					BeeUtils.values[n].setBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.beeq));
+					FlowerUtils.values[n] = new Model();
+					FlowerUtils.values[n].setProb(0.5f);
+					FlowerUtils.values[n].setName(getString(R.string.unknown));
+					FlowerUtils.values[n].setBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.beeq));
 				}
 			}
 			
@@ -218,17 +215,17 @@ public class MainActivity extends Activity {
 			
 			M[0] = new ModelParcelable();
 			
-			M[0].setName(BeeUtils.values[0].getName());
-			M[0].setDate(BeeUtils.values[0].getDate());
-			M[0].setGPS(BeeUtils.values[0].getGPS());
-			M[0].setBitmap(BeeUtils.values[0].getBitmap());
+			M[0].setName(FlowerUtils.values[0].getName());
+			M[0].setDate(FlowerUtils.values[0].getDate());
+			M[0].setGPS(FlowerUtils.values[0].getGPS());
+			M[0].setBitmap(FlowerUtils.values[0].getBitmap());
 			
 	        M[1] = new ModelParcelable();
 			
-			M[1].setName(BeeUtils.values[1].getName());
-			M[1].setDate(BeeUtils.values[1].getDate());
-			M[1].setGPS(BeeUtils.values[1].getGPS());
-			M[1].setBitmap(BeeUtils.values[1].getBitmap());
+			M[1].setName(FlowerUtils.values[1].getName());
+			M[1].setDate(FlowerUtils.values[1].getDate());
+			M[1].setGPS(FlowerUtils.values[1].getGPS());
+			M[1].setBitmap(FlowerUtils.values[1].getBitmap());
 			
 			intent.putExtra("cont", (ModelParcelable[])M);
 			
@@ -261,11 +258,11 @@ public class MainActivity extends Activity {
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
 
-				if(item.toString().equals("Neues Foto")){
+				if(item.toString().equals(getString(R.string.new_photo))){
 						 raisePhotoIntent();
 				}
 
-				if(item.toString().equals("Zur Liste")){
+				if(item.toString().equals(getString(R.string.to_list))){
 					
 				}
 
@@ -306,15 +303,15 @@ public class MainActivity extends Activity {
 		if (requestCode == RETURN_SEGMENTATION) {
 			if (resultCode == RESULT_OK) {
 				
-				BeeUtils.i1.setImBin(""+imageTime+"_test.jpg",0);
-				BeeUtils.i1.setImBin(""+imageTime+"_test_seg.jpg",1);
+				FlowerUtils.i1.setImBin(""+imageTime+"_test.jpg",0);
+				FlowerUtils.i1.setImBin(""+imageTime+"_test_seg.jpg",1);
 				
 				Calendar c = Calendar.getInstance();
 				
 				SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 				String formattedDate = df.format(c.getTime());
 				
-				BeeUtils.i1.setDate(formattedDate);
+				FlowerUtils.i1.setDate(formattedDate);
 				
 				try {
 					new NonfreeJNILib().execute(Environment.getExternalStorageDirectory().getPath()+"/Pictures/" + imageTime+"_test.jpg").get();
@@ -365,7 +362,6 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
@@ -377,22 +373,10 @@ public class MainActivity extends Activity {
 		switch(item.getItemId()){
 		case(R.id.action_settings):{
 			showDialog(DIALOG_ALERT);
-
 			return true;
 		}
-
 		default: return false;
 		}
-
-	}
-
-	public void dialogExample() {
-		Dialog dialog = new Dialog(MainActivity.this);
-		dialog.setTitle("Oswald Dialog");
-		dialog.setContentView(R.layout.text_box_dialog);
-		TextView tt = (TextView) dialog.findViewById(R.id.text_view_dialog);
-		tt.setText("This is my content");
-		dialog.show();
 	}
 
 	@Override
@@ -401,10 +385,10 @@ public class MainActivity extends Activity {
 		case DIALOG_ALERT:
 			// create out AlterDialog
 			Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage("BeeSmart wirklich beenden?");
+			builder.setMessage(R.string.quit_ask);
 			builder.setCancelable(true);
-			builder.setPositiveButton("Ja", new OkOnClickListener());
-			builder.setNegativeButton("Nein", new CancelOnClickListener());
+			builder.setPositiveButton(R.string.yes, new OkOnClickListener());
+			builder.setNegativeButton(R.string.no, new CancelOnClickListener());
 			AlertDialog dialog = builder.create();
 			dialog.show();
 		}
@@ -417,7 +401,6 @@ public class MainActivity extends Activity {
 	DialogInterface.OnClickListener {
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
-
 		}
 	}
 
@@ -441,48 +424,5 @@ public class MainActivity extends Activity {
 		super.onResume();
 		Log.d(TAG, "ON RESUME ON MAIN ACTIVITY HAS BEEN CALLED");
 	}
-	
-	public void netAlShow(){
-		new AlertDialog.Builder(this)
-	    .setTitle("Server nicht erreichbar!")
-	    .setMessage("Die Fotos werden gespeichert und können zu einem späteren Zeitpunkt übermittelt werden.")
-	    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-	        @Override
-			public void onClick(DialogInterface dialog, int which) { 
-	        	raisePhotoIntent();
-	        }
-	     })
-	    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-	        @Override
-			public void onClick(DialogInterface dialog, int which) { 
-	            // do nothing
-	        }
-	     })
-	    .show();
-	}
-	
-	public void myAlertFun(){
 		
-		 new AlertDialog.Builder(MainActivity.this)
-        .setTitle("Netzwerk ausgeschalten")
-        .setMessage("Soll das Netzwerk aktiviert werden?")
-        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-               
-                MainActivity.this.startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
-            }
-        })
-        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-               
-            }
-        }).show();	  
-	}
-	
-	public void addToUnlabelledDataBase(String inputText,String inputText2){
-		
-	}
-	
 }

@@ -23,8 +23,6 @@ public class DispIm extends ListActivity {
 	public static int mSelectedItem = -1;
 	public static TextView statusV;
 
-
-
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
@@ -45,25 +43,20 @@ public class DispIm extends ListActivity {
 		lstView.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
 
 
-		for(int i=0;i<BeeUtils.retNumIm+1;i++){	
-			listItems.add(BeeUtils.values[i]);
+		for(int i=0;i<FlowerUtils.retNumIm+1;i++){	
+			listItems.add(FlowerUtils.values[i]);
 		}
 		adapter = new MySimpleArrayAdapter(this, listItems);
 		this.setListAdapter(adapter);
 		System.out.println("The method onCreate has been called");
-
-
 	}  
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 
 		if(listItems.get(position).getBool()==0){
-
 			startActivity(new Intent(this,DetailActivity.class).putExtra("pos",position));
-
 		}
-
 
 		if(listItems.get(position).getBool()==1){
 
@@ -80,28 +73,21 @@ public class DispIm extends ListActivity {
 			System.out.println(i);
 			System.out.println(listItems.size());
 
-
 			if(listItems.get(i).getName().equals(((CheckBox) view).getTag()) && ((CheckBox) view).isChecked()){
 				listItems.get(i).setBool(1);
-				statusV.setText("Bitte auswahl bestätigen..");
+				statusV.setText(getString(R.string.confirm));
 				textF = true;
 			}
 
 			if(listItems.get(i).getName().equals(((CheckBox) view).getTag()) && !((CheckBox) view).isChecked()){
 				listItems.get(i).setBool(0);
 			}
-
 		}
+		
 		if(!textF){
-			statusV.setText("Welche der Planzen kommt deiner am nächsten?");
-
+			statusV.setText(getString(R.string.confirm_ask));
 		}
 
 		adapter.notifyDataSetChanged();
-
 	}
-
-
-
-
 } 

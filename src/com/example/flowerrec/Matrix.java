@@ -188,17 +188,17 @@ public class Matrix {
 	 InputStream inputStream = new FileInputStream(new File(fname));
 	 String s = readTextFile(inputStream);
 	 
-	 String rows_string = BeeUtils.getWithinTags(s,"rows");
+	 String rows_string = FlowerUtils.getWithinTags(s,"rows");
 	 int rows = Integer.parseInt(rows_string);
 	 theRows = rows;
 	 
 	 
-	 String cols_string = BeeUtils.getWithinTags(s,"cols");
+	 String cols_string = FlowerUtils.getWithinTags(s,"cols");
 	 int cols = Integer.parseInt(cols_string);
 	 
 	 matrix = new double[rows][cols]; 
 	 
-	 String line = BeeUtils.getWithinTags(s,"data");
+	 String line = FlowerUtils.getWithinTags(s,"data");
 	 String [] tokens = line.substring(1, line.length()).split(" ");
 	 
 	 int row = 0;
