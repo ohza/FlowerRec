@@ -7,7 +7,7 @@ http://www.robots.ox.ac.uk/~vgg/data/flowers/17/index.html
 
 As a clissifier, it uses the bag of visual words implementation of Shackenberg
 https://github.com/shackenberg/Minimal-Bag-of-Visual-Words-Image-Classifier
-and trains a support vector machine
+and trains a support vector machine.
 
 The files derived during training (support vectors and scaling file) are then put onto the device.
 
