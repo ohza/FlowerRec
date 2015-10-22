@@ -52,9 +52,7 @@ public class DetailActivity extends Activity {
 
 		final LinearLayout linLay = (LinearLayout) findViewById(R.id.linlay);
 
-
 		final ViewTreeObserver vto = linLay.getViewTreeObserver();
-
 
 		vto.addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
 
@@ -99,8 +97,6 @@ public class DetailActivity extends Activity {
 		Bitmap selB = addWhiteBorder(Bitmap.createScaledBitmap(FlowerUtils.values[getIntent().getIntExtra("pos",0)].getBitmap(),width/2-4,width/2-4,true),2);
 		Bitmap madB = addWhiteBorder(Bitmap.createScaledBitmap(madeImg,width/2-4,width/2-4,true),2);
 
-
-
 		selectedImage.setImageBitmap(selB);
 		madeImage.setImageBitmap(madB);
 
@@ -125,12 +121,4 @@ public class DetailActivity extends Activity {
 		this.onBackPressed();
 
 	}
-
-
-
-
-
-
-
-
 }
