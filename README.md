@@ -15,4 +15,4 @@ When testing, it uses the Sift (OpenCV for Android) implementation to derive
 and cluster the features. After projecting into the SVM, each class is associated with a probability,
 and displayed on the device.
 
-![alt text](https://github.com/ohza/FlowerRec/edit/Example.jpg "Example")
+![alt text](https://github.com/ohza/FlowerRec/blob/master/Example.jpg "Example")
