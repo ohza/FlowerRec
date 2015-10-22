@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">FlowerRec</string>
+    <string name="app_author">by Oswald Aldrian</string>
     <string name="action_settings">Exit</string>
     
     <string name="search_title">Search</string>
@@ -36,18 +37,18 @@
     <string name="your_flower_ask">Your flower</string>
     <string name="confirm_selection">Please confirm selection..</string>
    
-    <string name="daffodil_des">Daffodil ..</string>
-    <string name="snowdrop_des">Snowdrop ..</string>
-    <string name="lily_des">Lily ..</string>
-    <string name="bluebell_des">Bluebell ..</string>
+    <string name="daffodil_des">Daffodils are native to meadows and woods in southwest Europe and North Africa with a center of diversity in the Western Mediterranean, particularly the Iberian peninsula. Both wild and cultivated plants have naturalised widely, and were introduced into the Far East prior to the tenth century. Narcissi tend to be long-lived bulbs, which propagate by division, but are also insect-pollinated. Known pests, diseases and disorders include viruses, fungi, the larvae of flies, mites and nematodes. Some Narcissus species have become extinct, while others are threatened by increasing urbanisation and tourism.</string>
+    <string name="snowdrop_des">An important feature which helps to distinguish between species (and to help to determine the parentage of hybrids) is their "vernation" (the arrangement of the emerging leaves relative to each other). This can be "applanate", "supervolute" or "explicative". In applanate vernation the two leaf blades are pressed flat to each other within the bud and as they emerge; explicative leaves are also pressed flat against each other, but the edges of the leaves are folded back or sometimes rolled; in supervolute plants one leaf is tightly clasped around the other within the bud and generally remains at the point where the leaves emerge from the soil.</string>
+    <string name="lily_des">Lilies are tall perennials ranging in height from 2–6 ft (60–180 cm). They form naked or tunicless scaly underground bulbs which are their overwintering organs. In some North American species the base of the bulb develops into rhizomes, on which numerous small bulbs are found. Some species develop stolons. Most bulbs are deeply buried, but a few species form bulbs near the soil surface. Many species form stem-roots. With these, the bulb grows naturally at some depth in the soil, and each year the new stem puts out adventitious roots above the bulb as it emerges from the soil. These roots are in addition to the basal roots that develop at the base of the bulb.</string>
+    <string name="bluebell_des">According to the World Checklist of Selected Plant Families as of July 2012, the genus contains 11 species and one interspecific hybrid. The majority of species are distributed around the Mediterranean Basin, with only one species, Hyacinthoides non-scripta, occurring further north in north-western Europe. The species belong, according to analysis using molecular phylogenetics, to three species groups.</string>
    
     <string name="crocus_des">Crocus ..</string>
     <string name="iris_des">Iris ..</string>
     <string name="tiger_des">Tiger Lilly ..</string>
     <string name="tulip_des">Tulip ..</string>
     
-    <string name="fritillary_des">Fritillary ..</string>
-    <string name="sunflower_des">Sunflower ..</string>
+    <string name="fritillary_des">Fritillaries often have nodding, bell- or cup-shaped flowers, and the majority are spring-flowering. Certain species have flowers that emit disagreeable odors. The scent of Fritillaria imperialis has been called "rather nasty", while that of Fritillaries agrestis, known commonly as stink bells, is reminiscent of dog droppings. On the other hand, Fritillaries striata has a sweet fragrance. Most fritillaries contain poisonous alkaloids such as imperialin; some may even be deadly if ingested in quantity.</string>
+    <string name="sunflower_des">Sunflowers are usually tall annuals, that grow to a height of 50–400 centimetres. The rough and hairy stem is branched in the upper part in wild plants but is usually unbranched in domesticated cultivars. The petiolate leaves are dentate and often sticky. The lower leaves are opposite, ovate or often heart-shaped. The upper leaves are alternate and narrower. They bear one or several to many wide, terminal capitula (flower heads), with bright yellow ray florets at the outside and yellow or maroon (also known as a brown/red) disc florets inside. Several ornamental cultivars have red-colored ray florets; all of them stem from a single original mutant. During growth, sunflowers tilt during the day to face the sun, but stop once they begin blooming. This tracking of the sun in young sunflower heads is called heliotropism. By the time they are mature, sunflowers generally face east.</string>
     <string name="daisy_des">Daisy ..</string>
     <string name="dandelion_des">Dandelion ..</string>
         

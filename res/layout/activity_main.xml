@@ -57,13 +57,23 @@
      </LinearLayout>
      
      <Button
-            android:id="@+id/myHappyButton"
-            android:layout_below="@id/imageView1"
-            android:layout_above="@id/LinearLayout01"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#00FFFFFF"
-            android:textSize="24dp"
-            android:text="@string/bee_ask" />
+         android:id="@+id/myHappyButton"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/imageView1"
+         android:background="#00FFFFFF"
+         android:text="@string/bee_ask"
+         android:textSize="24dp" />
+     
+     <TextView
+        android:id="@+id/topBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myHappyButton"
+        android:layout_above="@id/LinearLayout01"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:text="@string/app_author" />
    
 </RelativeLayout>

@@ -362,7 +362,6 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
@@ -374,13 +373,10 @@ public class MainActivity extends Activity {
 		switch(item.getItemId()){
 		case(R.id.action_settings):{
 			showDialog(DIALOG_ALERT);
-
 			return true;
 		}
-
 		default: return false;
 		}
-
 	}
 
 	@Override
@@ -405,7 +401,6 @@ public class MainActivity extends Activity {
 	DialogInterface.OnClickListener {
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
-
 		}
 	}
 
