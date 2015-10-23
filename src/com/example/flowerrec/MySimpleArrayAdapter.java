@@ -1,8 +1,6 @@
 package com.example.flowerrec;
 
 import java.util.ArrayList;
-
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
@@ -22,7 +20,6 @@ public class MySimpleArrayAdapter extends ArrayAdapter<Model> {
 	ImageView imView;
 	CheckBox cB;
 
-
 	public MySimpleArrayAdapter(Context context, ArrayList<Model> values){
 		super(context, R.layout.rawlayout, values);
 		System.out.println("The MySimpleArrayAdapter has been called");
@@ -30,7 +27,6 @@ public class MySimpleArrayAdapter extends ArrayAdapter<Model> {
 		this.values = values;
 	}
 	
-
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -51,7 +47,6 @@ public class MySimpleArrayAdapter extends ArrayAdapter<Model> {
 			cB.setChecked(true);
 			rowView.setBackgroundColor(0xFFAEC6CF);
 			DispIm.statusV.setText(R.string.confirm_selection);
-
 		}
 		return rowView;
 

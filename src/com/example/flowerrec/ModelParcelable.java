@@ -6,7 +6,6 @@ import android.os.Parcelable;
 
 public class ModelParcelable implements Parcelable{
 
-
 	private String name;
 	private float prob;
 	private int isChecked;
@@ -14,10 +13,7 @@ public class ModelParcelable implements Parcelable{
 	private String date;
 	private String gps;
 	
-	ModelParcelable(){
-		
-	}
-
+	ModelParcelable(){}
 
 	public void setBitmap(Bitmap mybitmap){
 		this.bitmap = mybitmap;
@@ -55,17 +51,8 @@ public class ModelParcelable implements Parcelable{
 		return this.date;
 	}
 	
-	public String getGPS(){
-		return this.gps;
-	}
-	
-	
 	public void setDate(String mydate){
 		this.date = mydate;
-	}
-	
-	public void setGPS(String mygps){
-		this.gps = mygps;
 	}
 	
 	public ModelParcelable(Parcel in){

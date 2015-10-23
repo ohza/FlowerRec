@@ -27,7 +27,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,7 +41,6 @@ public class MainActivity extends Activity {
 
 	String TAG = "TEST";
 	Activity act;
-	DatabaseHandler dB;
 
 	String fromServer;
 	int c;
@@ -213,22 +211,15 @@ public class MainActivity extends Activity {
 			
 			ModelParcelable M [] = new ModelParcelable[2];
 			
-			M[0] = new ModelParcelable();
-			
-			M[0].setName(FlowerUtils.values[0].getName());
-			M[0].setDate(FlowerUtils.values[0].getDate());
-			M[0].setGPS(FlowerUtils.values[0].getGPS());
-			M[0].setBitmap(FlowerUtils.values[0].getBitmap());
-			
-	        M[1] = new ModelParcelable();
-			
-			M[1].setName(FlowerUtils.values[1].getName());
-			M[1].setDate(FlowerUtils.values[1].getDate());
-			M[1].setGPS(FlowerUtils.values[1].getGPS());
-			M[1].setBitmap(FlowerUtils.values[1].getBitmap());
+			for (int inst = 0; inst < 2;inst++)
+			{
+				M[inst] = new ModelParcelable();
+				M[inst].setName(FlowerUtils.values[inst].getName());
+				M[inst].setDate(FlowerUtils.values[inst].getDate());
+				M[inst].setBitmap(FlowerUtils.values[inst].getBitmap());
+			}
 			
 			intent.putExtra("cont", (ModelParcelable[])M);
-			
 			startActivity(intent);
 			
 		} catch (IOException e) {
