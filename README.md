@@ -1,11 +1,11 @@
-# FlowerRec
-Android application for Flower recognition
 
-A native android app for recognising flowers.
+# Android application for Flower recognition
+
+A native android app for recognizing flowers.
 Training is done offline and uses the dataset of Nilsback and Zisserman.
 http://www.robots.ox.ac.uk/~vgg/data/flowers/17/index.html
 
-As a clissifier, it uses the bag of visual words implementation of Shackenberg
+As a classifier, it uses the bag of visual words implementation of Shackenberg
 https://github.com/shackenberg/Minimal-Bag-of-Visual-Words-Image-Classifier
 and trains a support vector machine.
 
