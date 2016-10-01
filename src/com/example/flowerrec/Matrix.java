@@ -256,8 +256,6 @@ public class Matrix {
 	}
  
  
- 
- 
  public static double []  normalise (double [] orig_vec){
 
 		double [] ret_vec = new double[orig_vec.length];
